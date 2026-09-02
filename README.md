@@ -27,7 +27,6 @@ outputs/ - charts and generated reports
 5. Automated reporting pipeline
 
 ## Key Findings
-## Key Findings
 
 **1. Overtime is the strongest predictor of attrition**
 Employees who work overtime leave at nearly 3x the rate of those who don't 
@@ -53,6 +52,18 @@ Employees who left reported slightly lower average job satisfaction
 
 ![Satisfaction vs Attrition](outputs/charts/satisfaction_attrition.png)
 
+## Statistical Validation
+
+A Chi-square test of independence was conducted to verify whether OverTime 
+and Attrition are meaningfully related, rather than the pattern occurring 
+by chance.
+
+- Chi-square statistic: 87.56
+- P-value: < 0.001
+
+The result is highly statistically significant (p < 0.05), confirming that 
+employees who work overtime are significantly more likely to leave the 
+company. This is not a coincidental pattern in the data.
 
 ## How to Run
 ```bash
