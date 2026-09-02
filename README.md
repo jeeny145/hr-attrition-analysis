@@ -77,19 +77,20 @@ suggests OverTime is a stronger driver of attrition than Department alone.
 
 ## Model Performance
 
-A Logistic Regression model was trained to predict employee attrition.
+Two versions of the Logistic Regression model were compared:
 
-- Accuracy: 89.5%
-- Precision: 70%
-- Recall: 36%
+| Metric    | Default Model | Balanced Model (class_weight='balanced') |
+|-----------|---------------|---------------------------------------|
+| Accuracy  | 89.5%         | 71.4%                                  |
+| Precision | 70.0%         | 25.8%                                  |
+| Recall    | 36.0%         | 61.5%                                  |
 
-Note: Given the class imbalance in the dataset (only ~16% attrition), 
-accuracy alone is not a reliable metric — a model predicting "No" for 
-everyone would still score ~84%. The low recall (36%) indicates the model 
-misses a majority of employees who actually leave, which limits its 
-practical use for proactive HR intervention without further tuning 
-(e.g., class balancing techniques like SMOTE, or adjusting the decision 
-threshold).
+The balanced model trades precision for recall, catching significantly more 
+at-risk employees (61.5% vs 36.0%) at the cost of more false positives. For 
+HR use cases where missing an at-risk employee is costlier than a false 
+alarm, the balanced model is more practical despite its lower overall 
+accuracy — highlighting why accuracy alone is a poor metric for imbalanced 
+classification problems.
 
 ## How to Run
 ```bash
