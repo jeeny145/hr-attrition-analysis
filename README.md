@@ -75,6 +75,22 @@ This relationship is also statistically significant (p < 0.05), though
 notably weaker than the OverTime relationship (chi-square: 87.56). This 
 suggests OverTime is a stronger driver of attrition than Department alone.
 
+## Model Performance
+
+A Logistic Regression model was trained to predict employee attrition.
+
+- Accuracy: 89.5%
+- Precision: 70%
+- Recall: 36%
+
+Note: Given the class imbalance in the dataset (only ~16% attrition), 
+accuracy alone is not a reliable metric — a model predicting "No" for 
+everyone would still score ~84%. The low recall (36%) indicates the model 
+misses a majority of employees who actually leave, which limits its 
+practical use for proactive HR intervention without further tuning 
+(e.g., class balancing techniques like SMOTE, or adjusting the decision 
+threshold).
+
 ## How to Run
 ```bash
 pip install -r requirements.txt
