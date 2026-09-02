@@ -65,6 +65,16 @@ The result is highly statistically significant (p < 0.05), confirming that
 employees who work overtime are significantly more likely to leave the 
 company. This is not a coincidental pattern in the data.
 
+A second Chi-square test examined the relationship between Department and 
+Attrition.
+
+- Chi-square statistic: 10.80
+- P-value: 0.0045
+
+This relationship is also statistically significant (p < 0.05), though 
+notably weaker than the OverTime relationship (chi-square: 87.56). This 
+suggests OverTime is a stronger driver of attrition than Department alone.
+
 ## How to Run
 ```bash
 pip install -r requirements.txt
