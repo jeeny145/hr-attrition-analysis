@@ -91,6 +91,12 @@ HR use cases where missing an at-risk employee is costlier than a false
 alarm, the balanced model is more practical despite its lower overall 
 accuracy — highlighting why accuracy alone is a poor metric for imbalanced 
 classification problems.
+### Run the automated pipeline
+```bash
+cd scripts
+python3 pipeline.py
+```
+This will load the data, print key insights, and regenerate all charts automatically.
 
 ## How to Run
 ```bash
