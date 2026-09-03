@@ -9,10 +9,13 @@ training. This project analyzes what factors drive attrition and builds a
 model to flag employees at higher risk of leaving.
 
 ## Project Structure
-data/ - raw and processed datasets
-notebooks/ - exploration, analysis, and modeling notebooks
-scripts/ - automated data pipeline
-outputs/ - charts and generated reports
+data/ - raw dataset
+notebooks/
+01_exploration.ipynb - data cleaning, EDA, and visualizations
+02_statistical_test.ipynb - chi-square hypothesis tests
+03_model.ipynb - logistic regression model (default & balanced)
+scripts/pipeline.py - automated end-to-end pipeline
+outputs/charts/ - saved chart images
 
 ## Tools Used
 - Python (Pandas, NumPy, Matplotlib, Scikit-learn, SciPy)
