@@ -34,7 +34,7 @@ def save_charts(df, output_dir="../outputs/charts"):
     plt.close()
     
     # Chart 2: Department vs Attrition
-    df.groupby("Department")["Attrition"].value_counts(normalize=True).unstack().plot(kind="bar", figsize=(8,5), color=["#2E86AB", "#E67E22"])
+    df.groupby("Department")["Attrition"].value_counts(normalize=True).unstack().plot(kind="bar", figsize=(8,5), color=["#1B3A5C", "#E8735A"])
     plt.title("Attrition Rate by Department", fontsize=13, fontweight="bold")
     plt.ylabel("Proportion")
     plt.xticks(rotation=15)
@@ -43,7 +43,7 @@ def save_charts(df, output_dir="../outputs/charts"):
     plt.close()
     
     # Chart 3: Income vs Attrition
-    df.groupby("Attrition")["MonthlyIncome"].mean().plot(kind="bar", figsize=(6,5), color=["#2E86AB", "#E67E22"])
+    df.groupby("Attrition")["MonthlyIncome"].mean().plot(kind="bar", figsize=(6,5), color=["#1B3A5C", "#E8735A"])
     plt.title("Average Monthly Income: Stayed vs Left", fontsize=13, fontweight="bold")
     plt.ylabel("Average Monthly Income")
     plt.xticks(rotation=0)
@@ -52,7 +52,7 @@ def save_charts(df, output_dir="../outputs/charts"):
     plt.close()
     
     # Chart 4: Satisfaction vs Attrition
-    df.groupby("Attrition")["JobSatisfaction"].mean().plot(kind="bar", figsize=(6,5), color=["#2E86AB", "#E67E22"])
+    df.groupby("Attrition")["JobSatisfaction"].mean().plot(kind="bar", figsize=(6,5), color=["#1B3A5C", "#E8735A"])
     plt.title("Average Job Satisfaction: Stayed vs Left", fontsize=13, fontweight="bold")
     plt.ylabel("Average Job Satisfaction (1-4)")
     plt.xticks(rotation=0)
